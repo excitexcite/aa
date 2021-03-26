@@ -7,6 +7,7 @@ public class Manager : MonoBehaviour
 
     [SerializeField] Rotator rotator; // reference to rotator object
     [SerializeField] PinSpawner pinSpawner; // reference to pinSpawner object
+    [SerializeField] CameraAnimator cameraAnimator; // reference to cameraAnimator component that allows to controll camera animation
     private bool gameEnded = false; // variable that prevent calling GameOver() method more than one time
  
     public void GameOver()
@@ -20,6 +21,7 @@ public class Manager : MonoBehaviour
         gameEnded = true; 
         rotator.enabled = false; // disable the rotator component
         pinSpawner.enabled = false; // disable the pinSpawner component
+        cameraAnimator.SetGameOverTrigger(); // activatin game over animatin by setting up the trigger
     }
 
 }
