@@ -6,6 +6,7 @@ public class CameraAnimator : MonoBehaviour
 {
 
     [SerializeField] Animator animator; // reference to animator component that is placed on main camera
+    [SerializeField] Level level; // reference to level object
 
     public void SetGameOverTrigger()
     {
@@ -15,6 +16,16 @@ public class CameraAnimator : MonoBehaviour
     public void SetLevelCompleteTrigger()
     {
         animator.SetTrigger("LevelComplete");
+    }
+
+    public void LoadLevelCompleteScene()
+    {
+        level.LoadLevelCompleteScene();
+    }
+
+    public void LoadGameOverScene()
+    {
+        level.LoadGameOverScene();
     }
 }
 

@@ -43,3 +43,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b1c9ef207c75ee94eb58131a2d468555, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  levelButtons: []
+  totalSceneNumber: 6

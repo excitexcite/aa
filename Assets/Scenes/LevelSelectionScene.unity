@@ -3752,11 +3752,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7773135632353702492, guid: 95a1fc6724fe01142bb7e7653df0e4c1,
         type: 3}
-      propertyPath: totalSceneNumber
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 7773135632353702492, guid: 95a1fc6724fe01142bb7e7653df0e4c1,
-        type: 3}
       propertyPath: levelButtons.Array.data[0]
       value: 
       objectReference: {fileID: 279918039}
@@ -3767,14 +3762,14 @@ PrefabInstance:
       objectReference: {fileID: 120497357}
     - target: {fileID: 7773135632353702492, guid: 95a1fc6724fe01142bb7e7653df0e4c1,
         type: 3}
-      propertyPath: levelButtons.Array.data[2]
-      value: 
-      objectReference: {fileID: 120391093}
-    - target: {fileID: 7773135632353702492, guid: 95a1fc6724fe01142bb7e7653df0e4c1,
-        type: 3}
       propertyPath: levelButtons.Array.data[3]
       value: 
       objectReference: {fileID: 1614658517}
+    - target: {fileID: 7773135632353702492, guid: 95a1fc6724fe01142bb7e7653df0e4c1,
+        type: 3}
+      propertyPath: levelButtons.Array.data[2]
+      value: 
+      objectReference: {fileID: 120391093}
     - target: {fileID: 7773135632353702492, guid: 95a1fc6724fe01142bb7e7653df0e4c1,
         type: 3}
       propertyPath: levelButtons.Array.data[4]
