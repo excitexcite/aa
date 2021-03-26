@@ -9,12 +9,6 @@ public class Pin : MonoBehaviour
     [SerializeField] Rigidbody2D rigidbody; // reference to RigidBody2D component
     private bool isPinned = false; // bool variable that tell if pin reach the rotator or not
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
     // Update is called once per frame
     void FixedUpdate()
     {
@@ -31,13 +25,20 @@ public class Pin : MonoBehaviour
         if (collisionObj.tag == "Pin")
         {
             FindObjectOfType<Manager>().GameOver();
-            // TODO GAMEOVER
         }
         // if pin collides with the object with tag "Rotator" (the Rotator)
         else if (collisionObj.tag == "Rotator")
         {
             isPinned = true; // stop pin's movement
             transform.SetParent(collisionObj.transform); // make pin part of the rotator
+            FindObjectOfType<Score>().ChangeNumberOfPins(); // when pin hits the rotator, decrease number of pins on the score
+            Manager manager = FindObjectOfType<Manager>(); // getting manager object from the scene
+            manager.AddPin(); // increasing number of pinned pins in manager
+            // in the number of pinned pins is equal to the total number of pins for this level
+            if (manager.GetTotalNumberOfPins() == manager.GetCurrentNumberOfPins())
+            {
+                manager.LevelComplete();
+            }
         }
     }
 

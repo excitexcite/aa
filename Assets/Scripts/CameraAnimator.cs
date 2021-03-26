@@ -5,7 +5,7 @@ using UnityEngine;
 public class CameraAnimator : MonoBehaviour
 {
 
-    [SerializeField] Animator animator;
+    [SerializeField] Animator animator; // reference to animator component that is placed on main camera
 
     public void SetGameOverTrigger()
     {
