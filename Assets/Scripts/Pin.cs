@@ -28,6 +28,7 @@ public class Pin : MonoBehaviour
     {
         if (collisionObj.tag == "Pin")
         {
+            FindObjectOfType<Manager>().GameOver();
             // TODO GAMEOVER
         }
         else if (collisionObj.tag == "Rotator")
