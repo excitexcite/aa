@@ -153,7 +153,7 @@ MonoBehaviour:
   rotator: {fileID: 1593057168}
   pinSpawner: {fileID: 1173813481}
   cameraAnimator: {fileID: 519420033}
-  numberOfPins: 5
+  numberOfPins: 10
 --- !u!4 &107675991
 Transform:
   m_ObjectHideFlags: 0
@@ -684,7 +684,7 @@ Animator:
   m_GameObject: {fileID: 1593057166}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 5c41bc4af0832c84f8070141295f3f68, type: 2}
+  m_Controller: {fileID: 9100000, guid: aad3238675a08844f97023b8a76de311, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0

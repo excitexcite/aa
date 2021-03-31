@@ -437,6 +437,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 519420030}
+  level: {fileID: 0}
 --- !u!1 &527867809
 GameObject:
   m_ObjectHideFlags: 0
@@ -685,7 +686,7 @@ GameObject:
   - component: {fileID: 1935080664}
   - component: {fileID: 1935080663}
   m_Layer: 5
-  m_Name: Select level
+  m_Name: Menu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
