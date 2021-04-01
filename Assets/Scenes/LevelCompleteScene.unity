@@ -704,6 +704,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   textMeshProObject: {fileID: 527867809}
   level: {fileID: 7773135630380261156}
+  playButton: {fileID: 1989098210}
 --- !u!4 &1591520266
 Transform:
   m_ObjectHideFlags: 0
@@ -988,8 +989,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 7773135632353702492, guid: 95a1fc6724fe01142bb7e7653df0e4c1,
-          type: 3}
+      - m_Target: {fileID: 7773135630380261156}
         m_MethodName: LoadNextScene
         m_Mode: 1
         m_Arguments:

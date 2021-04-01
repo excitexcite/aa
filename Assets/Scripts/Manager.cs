@@ -18,7 +18,7 @@ public class Manager : MonoBehaviour
 
     public void AddPin() { currentNumberOfPins++; }
 
-    public void GameOver()
+    public void GameOver(int sceneIndex)
     {
         // if the game has ended no action will be done
         if (gameEnded)
@@ -26,12 +26,13 @@ public class Manager : MonoBehaviour
             return;
         }
         Debug.Log("ENDGAME");
+        PlayerPrefs.SetInt(Level.LAST_LEVEL_KEY, sceneIndex); // setting last played level to PlayerPrefs
         gameEnded = true;
         DisableGameElements();
         cameraAnimator.SetGameOverTrigger(); // activatin game over animatin by setting up the trigger
     }
 
-    public void LevelComplete()
+    public void LevelComplete(int sceneIndex)
     {
         // if the game has ended no action will be done
         if (gameEnded)
@@ -41,6 +42,16 @@ public class Manager : MonoBehaviour
         Debug.Log("LEVEL COMPLETE");
         gameEnded = true;
         DisableGameElements();
+        int nextLevelIndex = PlayerPrefs.GetInt(Level.NEXT_LEVEL_KEY, Level.LEVEL_TO_START); // getting last complete scene
+        //Debug.Log("nextLevelIndex = " + nextLevelIndex);
+        // if sceneIndex is greater than nextLevelIndex (this means that we complete this level for the first time)
+        if (sceneIndex >= nextLevelIndex)
+        {
+            // setting this level index to PlayerPrefs
+            //Debug.Log(sceneIndex);
+            PlayerPrefs.SetInt(Level.NEXT_LEVEL_KEY, sceneIndex + 1);
+            //PlayerPrefs.SetInt(Level.LAST_LEVEL_KEY, sceneIndex);
+        }
         cameraAnimator.SetLevelCompleteTrigger(); // activatin level complete animatin by setting up the trigger
     }
 

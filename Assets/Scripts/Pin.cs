@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Pin : MonoBehaviour
 {
@@ -21,10 +22,11 @@ public class Pin : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collisionObj)
     {
+        int sceneIndex = SceneManager.GetActiveScene().buildIndex; // getting the active scene (level) index
         // if pin collides with the object with tag "Pin" (the other pin), we provides game over functionality
         if (collisionObj.tag == "Pin")
         {
-            FindObjectOfType<Manager>().GameOver();
+            FindObjectOfType<Manager>().GameOver(sceneIndex);
         }
         // if pin collides with the object with tag "Rotator" (the Rotator)
         else if (collisionObj.tag == "Rotator")
@@ -37,7 +39,7 @@ public class Pin : MonoBehaviour
             // in the number of pinned pins is equal to the total number of pins for this level
             if (manager.GetTotalNumberOfPins() == manager.GetCurrentNumberOfPins())
             {
-                manager.LevelComplete();
+                manager.LevelComplete(sceneIndex); // manager`s function that allows to fix level completion
             }
         }
     }
