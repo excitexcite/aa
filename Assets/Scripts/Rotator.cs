@@ -7,12 +7,6 @@ public class Rotator : MonoBehaviour
 
     [SerializeField] private float speed = 100f; // rotation speed, use negative value to rotate backwards
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
     // Update is called once per frame
     void Update()
     {
