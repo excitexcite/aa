@@ -7,8 +7,8 @@ using UnityEngine.UI;
 
 /// <summary>
 ///     In this script scenes that are not game levels load by thier names (titles), and scenes which are levels
-///     load by the scene index. Such approarch requires to place game levels from 0 to N in unity build settings, and place
-///     non-level scene after all the levels.
+///     load by the scene index. Such approarch requires to place game levels from 1 to N in unity build settings, and place
+///     non-level scene after all the levels, exept the main menu scene, main menu scene must be the very first scene
 /// </summary>
 /// 
 
@@ -17,11 +17,11 @@ public class Level : MonoBehaviour
 
     // static variables for storing next level's index to play
     public static string NEXT_LEVEL_KEY = "nextLevelToPlay"; 
-    public static int LEVEL_TO_START = 0;
+    public static int LEVEL_TO_START = 1;
 
     // static variables for storing last played level index
     public static string LAST_LEVEL_KEY = "lastPlayedLevel";
-    public static int LEVEL_TO_PLAY = 0;
+    public static int LEVEL_TO_PLAY = 1;
 
     // statuc varuables for storing game over flag
     public static string GAME_COMPLETE_KEY = "gameComplete";
@@ -50,7 +50,7 @@ public class Level : MonoBehaviour
         // making buttons for unreached levels unactive
         for (int i = 0; i < levelButtons.Length; i++)
         {
-            if (i > levelReached)
+            if (i > levelReached - 1)
             {
                 levelButtons[i].interactable = false;
             }
@@ -79,9 +79,9 @@ public class Level : MonoBehaviour
         // otherwise getting the next scene to load index
         int sceneToLoadIndex = PlayerPrefs.GetInt(NEXT_LEVEL_KEY, LEVEL_TO_START);
         //Debug.Log("sceneToLoadIndex = " + sceneToLoadIndex);
-        // if index equals totalSceneNumber value (the last level has be loaded), loading 
+        // if index equals totalSceneNumber value plus one (the last level has be loaded), loading 
         // scene with index sceneToLoadIndex - 1
-        if (sceneToLoadIndex == totalSceneNumber)
+        if (sceneToLoadIndex == totalSceneNumber + 1)
         {
             SceneManager.LoadScene(sceneToLoadIndex - 1);
         }

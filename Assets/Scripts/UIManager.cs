@@ -14,7 +14,7 @@ public class UIManager : MonoBehaviour
         int passedLevelIndex = PlayerPrefs.GetInt(Level.NEXT_LEVEL_KEY, Level.LEVEL_TO_START); // getting last passed level index
         int lastLevelIndex = level.GetTotalSceneNumber(); // getting the very last scene index 
         // setting up the text
-        textMeshProObject.GetComponent<TextMeshProUGUI>().text = "Play level " + (passedLevelIndex + 1).ToString();
+        textMeshProObject.GetComponent<TextMeshProUGUI>().text = "Play level " + (passedLevelIndex).ToString();
 
     }
 }

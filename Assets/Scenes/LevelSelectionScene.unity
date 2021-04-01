@@ -282,7 +282,7 @@ PrefabInstance:
     - target: {fileID: 6990897086757437118, guid: 64037f9583d18e64ea98ce10c3197f21,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 6990897086757437119, guid: 64037f9583d18e64ea98ce10c3197f21,
         type: 3}
@@ -720,7 +720,7 @@ PrefabInstance:
     - target: {fileID: 6990897086757437118, guid: 64037f9583d18e64ea98ce10c3197f21,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6990897086757437119, guid: 64037f9583d18e64ea98ce10c3197f21,
         type: 3}
@@ -1242,7 +1242,7 @@ PrefabInstance:
     - target: {fileID: 6990897086757437118, guid: 64037f9583d18e64ea98ce10c3197f21,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 6990897086757437119, guid: 64037f9583d18e64ea98ce10c3197f21,
         type: 3}
@@ -3666,7 +3666,7 @@ PrefabInstance:
     - target: {fileID: 6990897086757437118, guid: 64037f9583d18e64ea98ce10c3197f21,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6990897086757437119, guid: 64037f9583d18e64ea98ce10c3197f21,
         type: 3}
@@ -3813,6 +3813,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 6990897086757437118, guid: 64037f9583d18e64ea98ce10c3197f21,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6990897086757437119, guid: 64037f9583d18e64ea98ce10c3197f21,
         type: 3}
