@@ -24,7 +24,7 @@ public class CameraAnimator : MonoBehaviour
         int nextSceneIndex = PlayerPrefs.GetInt(Level.NEXT_LEVEL_KEY, Level.LEVEL_TO_START);
         //Debug.Log("nextSceneIndex = " + nextSceneIndex);
         // if the next scene index equals totalSceneNumber (it means that last level was complete
-        if (nextSceneIndex == level.GetTotalSceneNumber())
+        if (nextSceneIndex == level.GetTotalSceneNumber() + 1)
         {
             // setting game complete flag to PlayerPrefs
             PlayerPrefs.SetInt(Level.GAME_COMPLETE_KEY, Level.GAME_COMPLETE);
